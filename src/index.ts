@@ -1,3 +1,4 @@
+import { Sequelize } from "sequelize";
 import { enviroment } from "./common/enviroment";
 import { app } from "./server/server";
 
