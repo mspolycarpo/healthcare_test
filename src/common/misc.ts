@@ -8,3 +8,9 @@ export const capitalizeFirstLetter = (str) => {
   const str2 = arr.join(" ");
   return str2;
 };
+
+export const randomDate = (start: Date, end: Date): string => {
+  return new Date(
+    start.getTime() + Math.random() * (end.getTime() - start.getTime())
+  ).toISOString();
+};

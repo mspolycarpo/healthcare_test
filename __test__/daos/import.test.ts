@@ -3,6 +3,8 @@ import { connection } from "../../src/database/config";
 import { loremIpsum } from "lorem-ipsum";
 import * as dao from "../../src/daos/importDao";
 import Import from "../../src/models/importModel";
+import { randomDate } from "../../src/common/misc";
+const moment = require("moment");
 
 const mockData = () => {
   return {
@@ -12,12 +14,6 @@ const mockData = () => {
     doctorName: loremIpsum(),
     appointmentDate: randomDate(new Date(2021, 1, 2), new Date()),
   };
-};
-
-const randomDate = (start: Date, end: Date): string => {
-  return new Date(
-    start.getTime() + Math.random() * (end.getTime() - start.getTime())
-  ).toISOString();
 };
 
 test("Bulk Create - happy ending", async () => {
@@ -41,7 +37,7 @@ test("Bulk Create - birthDate always be ISO ", async () => {
   );
 });
 
-test("Bulk Create - appointmentDate always be ISO ", async () => {
+test("Bulk Create - appointmentDate any date format accepect ", async () => {
   let mock = mockData();
   mock.appointmentDate = "10.01.2010";
   const patient = await dao.bulkCreate([mock]);
@@ -66,6 +62,4 @@ beforeAll(async () => {
   Import.sync();
 });
 
-afterAll(async () => {
-  await connection.close();
-});
+afterAll(async () => {});

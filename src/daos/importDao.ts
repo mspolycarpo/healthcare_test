@@ -1,6 +1,6 @@
 import { capitalizeFirstLetter } from "../common/misc";
 import Import from "../models/importModel";
-
+const moment = require("moment");
 export const bulkCreate = async (
   data: Array<{
     name: string;

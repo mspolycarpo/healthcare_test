@@ -20,7 +20,6 @@ export const listAll = async (
 ) => {
   try {
     const data = await dao.listAll();
-    console.log(data);
     res.send(data);
   } catch (e) {
     next(e);

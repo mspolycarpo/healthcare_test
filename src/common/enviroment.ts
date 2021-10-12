@@ -8,6 +8,6 @@ export const enviroment = {
     port: process.env.SERVER_PORT || 3000,
   },
   database: {
-    url: process.env.DB_URL || "sqlite::memory",
+    url: process.env.DB_URL,
   },
 };

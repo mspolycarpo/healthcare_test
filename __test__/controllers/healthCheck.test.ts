@@ -1,7 +1,7 @@
 import { expect, test } from "@jest/globals";
 import "jest";
 import * as request from "supertest";
-import { app } from "../src/server/server";
+import { app } from "../../src/server/server";
 const basePath = "/healthCheck";
 
 test("Health Check", async () => {
