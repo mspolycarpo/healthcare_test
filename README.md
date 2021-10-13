@@ -53,3 +53,7 @@ Para importar os dados realize o comando:
 node ImportToAPI.js
 
 Nota: será necessário rodar o script será necessário ter o node e rodar "npm i"
+
+## Documentação
+
+Na pasta "docs" existe uma biblioteca do postman contendo exemplo das requests

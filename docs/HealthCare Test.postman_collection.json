@@ -10,7 +10,15 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "{{BASE_URL}}/healthCheck",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"healthCheck"
+					]
+				}
 			},
 			"response": []
 		},
@@ -21,7 +29,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "[\n    {\n    \"name\":\"Matheus\",\n    \"address\":\"Rua 100\",\n    \"birthDate\":\"29.10.2023\",\n    \"doctorName\":\"Dr. Who\",\n    \"appointmentDate\":\"10/10/2021\"\n}\n]",
+					"raw": "[\n    {\n    \"name\":\"Matheus\",\n    \"address\":\"Rua 100\",\n    \"birthDate\":\"2023-03-20\",\n    \"doctorName\":\"Dr. Who\",\n    \"appointmentDate\":\"2021-10-20\"\n}\n]",
 					"options": {
 						"raw": {
 							"language": "json"
