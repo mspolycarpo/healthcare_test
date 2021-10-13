@@ -1,0 +1,74 @@
+{
+	"info": {
+		"_postman_id": "351ec661-8cb8-452d-8dd1-ea8d506e6d94",
+		"name": "HealthCare Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Import from CSV",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n    \"name\":\"Matheus\",\n    \"address\":\"Rua 100\",\n    \"birthDate\":\"29.10.2023\",\n    \"doctorName\":\"Dr. Who\",\n    \"appointmentDate\":\"10/10/2021\"\n}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/import/fromCSV",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"import",
+						"fromCSV"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list All imports",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n    \"name\":\"Matheus\",\n    \"address\":\"Rua 100\",\n    \"birthDate\":\"10.10.2023\"\n},\n    {\n    \"name\":\"Matheus\",\n    \"address\":\"Rua 100\",\n    \"birthDate\":\"10.10.2023\"\n},\n    {\n    \"name\":\"Matheus\",\n    \"address\":\"Rua 100\",\n    \"birthDate\":\"10/10/2022\"\n}\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/import",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"import"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

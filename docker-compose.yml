@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  sqlite3:
+    image: nouchka/sqlite3:latest
+    volumes:
+      - ./db/:/root/db/
+  api:
+    build: "./"
+    ports:
+      - "3000:3000"
+    container_name: api-container
+    restart: always
